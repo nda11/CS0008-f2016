@@ -27,5 +27,5 @@ print('The subtotal of your items is:',subtotal)
 tax=subtotal*0.7
 total=subtotal + tax
 # display the total
-print('the total amount of your items with tax is:',\
+print('the total amount of your items with tax is:',
       format(total,',.2f'))
