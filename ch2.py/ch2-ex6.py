@@ -12,6 +12,4 @@
 # exercise 6
 #This program asks the user to enter the amount of a purchase
 amount_purchase=(float(input('enter the amount of a purchase:' ))
-#calculate the state and county sales tax
-state_tax=0.05
-county_tax=0.025
+
