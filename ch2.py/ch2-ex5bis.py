@@ -22,7 +22,6 @@ time2=10
 time3=15
 time4=2.25
 
-
 # get the distance traveled
 distance1=speed *time1
 distance2=speed *time2
