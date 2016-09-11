@@ -20,4 +20,4 @@ temperature_in_Fahrenheit= input('How much is the temperature in F:')
 Celsius=float(5 * ( temperature_in_Fahrenheit -32)/9)
 
 #display the temperature in Celsius
-print('The tempreture equal in Celsius',Celsius,'c')
+print('The tempreture equal in Celsius',Celsius,'c.')
