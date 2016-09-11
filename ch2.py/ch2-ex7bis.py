@@ -18,7 +18,6 @@
 #It should convert to metrics and than display Km driven,
 # liters used and L per 100Km.
 
-
 #Answer
 #input number of miles driven
 Miles= input('how many the number of miles you have driven?:')
