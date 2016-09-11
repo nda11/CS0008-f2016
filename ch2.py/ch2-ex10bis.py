@@ -32,5 +32,6 @@ buttes=240*number_of_cookies/48
 flour=330*number_of_cookies/48
 
 
+
 #Display the result
 print('This is your recipe:',sugar,'gram of sugar,',buttes,'gram of buttes''and',flour,'gram flour')
