@@ -15,7 +15,6 @@
 #distance= speed * time
 speed = 90
 
-
 # set value to the time variable
 time1=6
 time2=10
