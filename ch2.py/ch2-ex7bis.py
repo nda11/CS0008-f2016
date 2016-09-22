@@ -20,10 +20,10 @@
 
 #Answer
 #input number of miles driven
-Miles= input('how many the number of miles you have driven?:')
+Miles= float(input('how many the number of miles you have driven?:'))
 
 #input number of gallons of gas used.
-gallons_gas=input('how many number of gallons of gas you used?:')
+gallons_gas=float(input('how many number of gallons of gas you used?:'))
 
 # assign Kilometers and liter_uesd
 #  calculate miles_per_gallon, Km_per_Liter and L_per_100Km
