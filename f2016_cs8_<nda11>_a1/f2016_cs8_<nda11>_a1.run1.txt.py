@@ -25,6 +25,7 @@ if input_1 ==1 or input_1 ==2:
         input_2=input('how many miles you drove:')
         input_3=input('how many number of gallons you used:')
         MPG = float(input_2 / input_3)
+
         km_drove= input_2*one_mile
         liter_used= input_3*one_gallon
         L_P_100K=float(100*liter_used/km_drove)
@@ -32,24 +33,27 @@ if input_1 ==1 or input_1 ==2:
 
         # Dipaly the schedual
         print format('                             USC  \t  metric ')
-        print format('Distance ______________:\t'),input_2,'miles\t'  ,km_drove,'km'
-        print format('Gas ___________________:\t'),input_3,'Gallons\t',liter_used,'Liters'
-        print format('Consumption ___________:\t'),MPG,'MPG\t',   L_P_100K,'l/100Km'
+        print ('Distance ______________:\t{0:6.3f} Miles\t {1:6.3f}Km'.format(input_2,km_drove))
+        print ('Gas ___________________:\t{0:6.3f} Gallons\t{1:6.3f}liter'.format(input_3,liter_used ))
+        print ('Consumption ___________:\t{0:6.3f} MPG\t{1:6.3f}l/100Km'.format(MPG,  L_P_100K))
+
+
 
 
             # set the consumpiton rate by using if and elif condition and display
         # the consumption rate after the schedual
 
         if L_P_100K > 20:
-            print('Gas Consumption Rating \t: Extremely poor')
+            print('Gas Consumption Rating \t:  Extremely poor')
         elif L_P_100K>15 and L_P_100K<= 20:
-            print('Gas Consumption Rating \t: poor')
+            print ('Gas Consumption Rating \t: poor')
         elif L_P_100K>10 and L_P_100K<= 15:
-            print('Gas Consumption Rating \t: Average')
+            print ('Gas Consumption Rating \t: Average')
         elif L_P_100K > 8 and L_P_100K <= 10:
-            print('Gas Consumption Rating \t: Good')
+          print ('Gas Consumption Rating \t:   Good')
         elif L_P_100K <= 8:
-            print('Gas Consumption Rating \t: Exellent')
+
+          print ('Gas Consumption Rating \t: Exellent')
 
 
 
@@ -77,11 +81,10 @@ if input_1 ==1 or input_1 ==2:
         L_P_100K = float(100 * input_5 / input_4)
 
         # Dispaly the schedual
-
-        print format('                             USC  \t    metric ')
-        print format('Distance ______________:\t'),  mile_drove,'miles\t',     input_4,'km'
-        print format('Gas ___________________:\t'), gallon_used,'Gallons\t',   input_5,'Liters'
-        print format('Consumption ___________:\t'), MPG1, 'MPG\t',             L_P_100K,'l/100Km'
+        print format('                             USC  \t  metric ')
+        print ('Distance ______________:\t{0:6.3f} Miles\t{1:6.3f}Km'.format(mile_drove, input_4))
+        print ('Gas ___________________:\t{0:6.3f} Gallons\t{1:6.3f}liters'.format(gallon_used,input_5))
+        print ('Consumption ___________:\t{0:6.3f} MPG\t {1:6.3f}l/100Km'.format(MPG1, L_P_100K))
 
 
 

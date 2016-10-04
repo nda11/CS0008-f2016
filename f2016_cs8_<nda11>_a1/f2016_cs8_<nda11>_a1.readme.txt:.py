@@ -1,49 +1,4 @@
-#name : Nabil Alhassani
-# email : nda11@pitt.edu
-# date :septemper/11th
-# class : CS0008-f2016
-# instructor : Max Novelli (man8@pitt.edu)
-# Description:Starting with Python, Chapter 2,
-# Notes:
-
-#  first of all, I used follow chart to solve the problem . Next, start write down the steps :
-# first, I  assign value to variables  USC and metric,also, I assign value to variables
-# (1mile,1gallon,1liter, 1 kilometer. Then, I put an input that get user unit whether
-#  USC number 1 #or Metric number 2.
-
-# I started if and else condition using Boolean signs,
-# choose between the two unit and Display #statement when user don't choose a unit.
-# Then I put if, elif condition in side the if ,which start #with USC and Metric :
-
-# in USC I:
-# display the unit choose
-# get distance drove by miles
-# get consumption by gallon
-# calculate the miles per gallon
-# convert distance from mile to kilometer
-# convert consumption from gallon to liters
-# calculate the consumption from liters per kilometer
-
-# Display the schedule
-
-# set the consumption rate by using if and elif condition using boolean sign
-# display the consumption rate after the schedule
-
-# metric
-# display the unit choose
-# get distance drove by kilometers
-# get consumption by liters
-# convert distance from kilometer to mile
-# convert consumption from liter to gallon
-# calculate the miles per gallon
-# calculate the consumption from liters per kilometer
-
-# Display the schedule
-
-# set the consumption rate by using if and elif condition using boolean sign
-#and display
-# the consumption rate after the schedule
-#value to variables  USC and metric
+# assingn value to variables  USC and metric
 USC=1
 Metric=2
 # assingn value to variables (1mile,1gallon,1liter, 1 kilometer )
@@ -70,6 +25,7 @@ if input_1 ==1 or input_1 ==2:
         input_2=input('how many miles you drove:')
         input_3=input('how many number of gallons you used:')
         MPG = float(input_2 / input_3)
+
         km_drove= input_2*one_mile
         liter_used= input_3*one_gallon
         L_P_100K=float(100*liter_used/km_drove)
@@ -77,24 +33,27 @@ if input_1 ==1 or input_1 ==2:
 
         # Dipaly the schedual
         print format('                             USC  \t  metric ')
-        print format('Distance ______________:\t'),input_2,'miles\t'  ,km_drove,'km'
-        print format('Gas ___________________:\t'),input_3,'Gallons\t',liter_used,'Liters'
-        print format('Consumption ___________:\t'),MPG,'MPG\t',   L_P_100K,'l/100Km'
+        print ('Distance ______________:\t{0:6.3f} Miles\t {1:6.3f}Km'.format(input_2,km_drove))
+        print ('Gas ___________________:\t{0:6.3f} Gallons\t{1:6.3f}liter'.format(input_3,liter_used ))
+        print ('Consumption ___________:\t{0:6.3f} MPG\t{1:6.3f}l/100Km'.format(MPG,  L_P_100K))
+
+
 
 
             # set the consumpiton rate by using if and elif condition and display
         # the consumption rate after the schedual
 
         if L_P_100K > 20:
-            print('Gas Consumption Rating \t: Extremely poor')
+            print('Gas Consumption Rating \t:  Extremely poor')
         elif L_P_100K>15 and L_P_100K<= 20:
-            print('Gas Consumption Rating \t: poor')
+            print ('Gas Consumption Rating \t: poor')
         elif L_P_100K>10 and L_P_100K<= 15:
-            print('Gas Consumption Rating \t: Average')
+            print ('Gas Consumption Rating \t: Average')
         elif L_P_100K > 8 and L_P_100K <= 10:
-            print('Gas Consumption Rating \t: Good')
+          print ('Gas Consumption Rating \t:   Good')
         elif L_P_100K <= 8:
-            print('Gas Consumption Rating \t: Exellent')
+
+          print ('Gas Consumption Rating \t: Exellent')
 
 
 
@@ -122,11 +81,10 @@ if input_1 ==1 or input_1 ==2:
         L_P_100K = float(100 * input_5 / input_4)
 
         # Dispaly the schedual
-
-        print format('                             USC  \t    metric ')
-        print format('Distance ______________:\t'),  mile_drove,'miles\t',     input_4,'km'
-        print format('Gas ___________________:\t'), gallon_used,'Gallons\t',   input_5,'Liters'
-        print format('Consumption ___________:\t'), MPG1, 'MPG\t',             L_P_100K,'l/100Km'
+        print format('                             USC  \t  metric ')
+        print ('Distance ______________:\t{0:6.3f} Miles\t{1:6.3f}Km'.format(mile_drove, input_4))
+        print ('Gas ___________________:\t{0:6.3f} Gallons\t{1:6.3f}liters'.format(gallon_used,input_5))
+        print ('Consumption ___________:\t{0:6.3f} MPG\t {1:6.3f}l/100Km'.format(MPG1, L_P_100K))
 
 
 
