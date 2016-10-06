@@ -1,0 +1,20 @@
+what system you choose USC press number 1 or metric press 2:2
+you choose metric measuerment
+how many number of kilometers you drove:1
+how many number of liters you used:1
+                             USC  	  metric
+Distance ______________:	 0.621 Miles	 1.000Km
+Gas ___________________:	 0.264 Gallons	 1.000liters
+Consumption ___________:	 2.352 MPG	 100.000l/100Km
+Gas Consumption Rating :    Extremely poor
+
+
+what system you choose USC press number 1 or metric press 2:1
+you choose USC measuerment
+how many miles you drove:1
+how many number of gallons you used:1
+                             USC  	  metric
+Distance ______________:	 1.000 Miles	  1.609Km
+Gas ___________________:	 1.000 Gallons	 3.785liter
+Consumption ___________:	 1.000 MPG	235.215l/100Km
+Gas Consumption Rating 	:  Extremely poor

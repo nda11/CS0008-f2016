@@ -1,0 +1,44 @@
+# First I used a fellow chart  to solve the problem . Then I:
+# assign value to variables  USC and metric
+
+# assign value to variables (1mile,1gallon,1liter, 1 kilometer )
+
+
+# get user unit input
+
+
+# condition choose between two unit::
+# or
+# Display when user don't choose a unit
+
+# Here is the calculation:
+# Using If and elif
+# USC
+# display the unit choose
+# get distance drove by miles
+# get consumption by gallon
+# calculate the miles per gallon
+# convert distance from mile to kilometer
+# convert consumption from gallon to liters
+# calculate the consumption from liters per kilometer
+
+# Display the schedule(result)
+
+# set the consumption rate by using if and elif condition and display
+# the consumption rate after the schedule(result)
+
+
+
+# metric
+# display the unit choose
+# get distance drove by kilometers
+# get consumption by liters
+# convert distance from kilometer to mile
+# convert consumption from liter to gallon
+# calculate the miles per gallon
+# calculate the consumption from liters per kilometer
+
+# Display the schedule( result)
+
+# set the consumption rate by using if and elif condition and display
+# the consumption rate after the schedule(result)
