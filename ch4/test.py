@@ -1,25 +1,14 @@
-def main():
-    # Ask the user for their budget for the month.
-    budget = input('What is your budget for the month? ')
+#This program gets the speed and hours driven of
+#a vehicle then uses a loop and calculates the
+#miles driven for each hour (3 hours)
 
-    # Create a variable to control the loop.
-    keep_going = 'y'
+#Get the speed of the vehicle in miles per hour
+speed = int(input("What was the speed of the vehicle (MPH)?\n"))
 
-    # Calculate a series of expenses.
-    while keep_going == 'y':
-        # Ask the user to enter an expense.
-        expense = input('Enter an expense: ')
+#Get the number of hours driven
+hours_driven = int(input("How many hours did you drive?\n"))
 
-        # Calculate the remainder of the budget.
-        budget = budget - expense
+print("{:>5}{:>10}".format("Hour", "Distance"))
 
-        # State what the remaining budget is.
-        print 'Your remaining budget is $%.2f.' % budget
-
-        # Ask the user if they'd like to enter another expense.
-        keep_going = raw_input('Do you want to calculate another ' + \
-                               'expense (Enter y for yes): ')
-
-
-# Call the main function.
-main()
+for hour in range(1, hours_driven+1):
+	print("{:>1}{:>10}".format(hour, hour * speed))
