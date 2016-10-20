@@ -1,13 +1,17 @@
-def main():
-    tic_a=int(input('how many tiket sold in class A?'))
-    tic_b=int(input('how many tiket sold in class B?'))
-    tic_c=int(input('how many tiket sold in class C?'))
+# Program to find
+# the sum of all numbers
+# stored in a list
 
-    income=income_seat_sale(tic_a,tic_b,tic_c)
+# List of numbers
+numbers = [6,5,3,8,4,2,5,4,11]
 
-    print ('the amont income from ticket sales is $:', income)
+# variable to store the sum
+sum = 0
 
-def income_seat_sale(tic_a,tic_b,tic_c):
-    income=(tic_a*20)+ (tic_b*15)+ (tic_c*10)
-    return income
-main()
+# iterate over the list
+for val in numbers:
+	sum = sum+val
+
+# print the sum
+# Output: The sum is 48
+print("The sum is",sum)
