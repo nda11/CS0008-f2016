@@ -30,3 +30,7 @@ def main():
     infile.close()
     input()
 main()
+
+# output
+# infile=open('names.txt','r')
+#IOError: [Errno 2] No such file or directory: 'names.txt'
