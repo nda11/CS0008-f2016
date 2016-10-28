@@ -65,17 +65,21 @@ while (True):
 
         ttn=0
         ttd=0
-#
+#calculat and itirate the total # of lines and total distance run
         ttn+=1+pd
         ttd+=1+ptn
-
+# dispaly the total # of lines and total distance run
         print('')
         print('Totals')
         print('Total# of lines',ttn,)
         print("Total distance run", ttd)
         print('')
+# the exxpttion possible IOError,NameError,SyntaxError and TypeError
     except IOError:
         print ('Not found the file')
-
     except NameError:
         print ('File is not defined')
+    except SyntaxError:
+        print ('invalid syntax')
+    except TypeError:
+        print ('coercing to Unicode: need string or buffer, type found')
