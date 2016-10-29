@@ -9,10 +9,8 @@
 # Notes:
 # any notes to the instructor and/or TA goes here
 # ...and now let's program with Python
-# This program displays my name
-# and address, with city, state, and ZIP
-# my telephone number
-# my collage
+# This program calculates how many lines and sum the distance run for
+#two files and display the total.
 # Assignment#2
 
 # create a  processfile(fh)function
