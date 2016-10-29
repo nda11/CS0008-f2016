@@ -22,4 +22,8 @@ Totals
 18
   Total distance run :     50.537
 
+---------
+the excption error
+File read:2
+Not found the file
 File read:

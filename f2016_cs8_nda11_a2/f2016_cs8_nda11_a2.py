@@ -31,11 +31,9 @@ def processfile(fh):
 #split the line
         temp=line.split(",")
 #assing distance to value
-        pd +=1
-        ptn+=float(temp[1])
 # increase the counting distane run and number of lines
-
-
+        pd+=1
+        ptn+=float(temp[1])
 #closing file.
         fo.close()
 # return the distance and number of lines the function
@@ -66,17 +64,17 @@ while (True):
     try:
 
 # get the file name
-        fh = input(("File read:"))
+        fo = input(("File read:"))
 
 # if condition to exit the program
-        if(fh=="quite"or fh=="q"):
+        if(fo=="quite"or fo=="q"):
             print ('')
 # display the exit statment
             print('File to be read: Quit ')
             exit()
 
 #the file go back to be processe(fh) function
-        pd,ptn=processfile(fh)
+        pd,ptn=processfile(fo)
 # display the Total# of lines and distance run
 
         printKV("Partial Total# of lines", ptn,)
