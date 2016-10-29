@@ -1,0 +1,28 @@
+First of all, I created a function called process file(ft)
+ that processes the file opening in a reading mode.
+ I assigned variables to distance run and number of lines(ptn,pd)
+ equal zero.
+ In side this function; I used the (for) loop to read throw the file.
+  Then, I Remove the new line and split the line,
+  which helps in reading the file.
+  I assigned the distance run to value, which accepts float numbers.
+   Next, iteration and increasing the counting distance run and a number of lines for each loop. Then, closing file.
+   At the end of this function, I return the distance
+   and a number of lines to the function.
+
+I create printKV function that includes t
+he defining the key length and get the max space
+I used if the value is integer and float using (isinstanc).
+ Then printing the format, using if and elif (isinstance).
+Then, I create the infinite loop ask the user for the file name.
+Here I used (try function) to use exception.
+I prompt the user to write the file name; then I used if condition to exit from the program if the user chooses to and display the exit statement.
+Here I called the processfile(fh)
+that goes back to be processed the file.
+
+Then, display the Total# of lines and distance run .
+Assign value to Total# of lines and "Total distance run to zero.
+Next, I calculate and iterate
+the total # of lines and total distance run and display
+the total # of lines and total distance run then,
+ the exception possible IOError and Name Error
