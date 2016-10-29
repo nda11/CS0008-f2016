@@ -56,19 +56,18 @@ def printKV(key,value, klen=0):
         print(format("%20s : %10.3f"%(key,value)))
     else:
         print(format(key,str(kl)+'s'))
-
 # The infinite loop ask the user for file name
 
 while (True):
-    #prompt the user to enter file name
-    fo = input(("File read:"))
     try:
+
+        fo = input(("File read:"))
         print ('')
-        if fo == "quite" or fo == "q":
-                print ('')
+        if (fo == "quite" or fo == "q"):
+            print ('')
 # display the exit statment
-                print('File to be read: Quit ')
-                exit()
+        print('File to be read: Quit ')
+        exit()
 
 #the file go back to be processe(fh) function
         pd,ptn=processfile(fo)
