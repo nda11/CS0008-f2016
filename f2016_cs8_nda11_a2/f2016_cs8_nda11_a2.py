@@ -13,7 +13,7 @@
 # and address, with city, state, and ZIP
 # my telephone number
 # my collage
-# Assinment 2
+# Assignment#2
 
 # create a  processfile(fh)function
 
@@ -31,10 +31,11 @@ def processfile(fh):
 #split the line
         temp=line.split(",")
 #assing distance to value
-        dist=float(temp[1])
-# increase the counting distane run and number of lines
         pd +=1
-        ptn+=dist
+        ptn+=float(temp[1])
+# increase the counting distane run and number of lines
+
+
 #closing file.
         fo.close()
 # return the distance and number of lines the function
@@ -53,9 +54,9 @@ def printKV(key,value, klen=0):
 # check if valu is intger and float using (isinstanc)
     if (isinstance(value,int)):
 #print
-        print("%20s : %10d"%(key,value))
+        print(format("%20s : %10d"%(key,value)))
     elif(isinstance(value,float)):
-        print("%20s : %10.3f"%(key,value))
+        print(format("%20s : %10.3f"%(key,value)))
     else:
 
         print (format(key,str(kl)+'s'))
@@ -66,17 +67,18 @@ while (True):
 
 # get the file name
         fh = input(("File read:"))
+
 # if condition to exit the program
         if(fh=="quite"or fh=="q"):
-
             print ('')
 # display the exit statment
             print('File to be read: Quit ')
             exit()
 
-#the file go back to be processed
+#the file go back to be processe(fh) function
         pd,ptn=processfile(fh)
 # display the Total# of lines and distance run
+
         printKV("Partial Total# of lines", ptn,)
         printKV("Partial Total distance run", pd)
         print("")
@@ -86,8 +88,8 @@ while (True):
         ttn=0
         ttd=0
 #calculat and itirate the total # of lines and total distance run
-        ttn+=+ptn
-        ttd+=+pd
+        ttn+=ptn
+        ttd+=pd
 # dispaly the total # of lines and total distance run
 
         print('Totals')
