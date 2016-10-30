@@ -1,26 +1,21 @@
-File read:f2016_cs8_a2.data.1.csv
-23
-Partial Total# of lines :          1
-26
-Partial Total distance run :      5.014
-
-Totals
-15
-     Total# of lines :          1
-18
-  Total distance run :      5.014
-
 File read:f2016_cs8_a2.data.2.csv
-23
+
 Partial Total# of lines :          1
-26
 Partial Total distance run :     50.537
 
 Totals
-15
      Total# of lines :          1
-18
   Total distance run :     50.537
+
+File read:f2016_cs8_a2.data.1.csv
+
+Partial Total# of lines :          1
+Partial Total distance run :      5.014
+
+Totals
+     Total# of lines :          1
+  Total distance run :      5.014
+
 
 ---------
 the excption error
