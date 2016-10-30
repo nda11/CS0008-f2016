@@ -28,7 +28,7 @@ def processfile(fh):
         line=line.rstrip('\n')
 #split the line
         temp=line.split(",")
-#assing distance to value
+
 # increase the counting distane run and number of lines
         pd+=1
         ptn+=float(temp[1])
