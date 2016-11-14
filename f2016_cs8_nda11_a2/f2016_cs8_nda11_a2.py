@@ -7,7 +7,7 @@
 # instructor : Max Novelli (man8@pitt.edu)
 # Description:Starting with Python, Chapter 2,
 # Notes:
-# any notes to the instructor and/or TA goes here
+# 
 # ...and now let's program with Python
 # This program calculates how many lines and sum the distance run for
 #two files and display the total.

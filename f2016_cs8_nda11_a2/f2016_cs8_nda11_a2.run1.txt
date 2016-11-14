@@ -16,7 +16,6 @@ Totals
      Total# of lines :          1
   Total distance run :      5.014
 
-
 ---------
 the excption error
 File read:2
