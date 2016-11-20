@@ -1,5 +1,5 @@
-num =7
-for i in range(0, num):
+
+for i in range(0, 7):
     import random
 lotterynumbers = []
 x = 0
