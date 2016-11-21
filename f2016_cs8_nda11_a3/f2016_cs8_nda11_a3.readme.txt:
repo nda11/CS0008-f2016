@@ -1,0 +1,24 @@
+First we should read a filename(master)txt file.
+and check if the file name is right then lower
+the input.
+We can do it with a function that returns
+a list of input file lines.
+On the next step one has to process a csv file.
+the first line containing columns header
+to skip (name , distant line) with readline()
+we can iterate the remaining
+lines and split them with comma separator into two
+parts: name and distance
+In the main function we can gather all the pairs using nested
+for loops: iterate each (name, dist) pair from the csv file,
+which, in turn, is given by the other loop on the lines read
+from the master file.
+We can construct a list of a participant names
+using set and passing the whole names list to it.
+Then, we can create a dictionary with distinct participant
+names as keys
+and a list of distances run by each participant as values.
+total distance run by all participants is obtained by summing
+all distances in the list of (name, dist) pairs.
+From the above mentioned list  of (name, dist) pairs
+one can get both minimal and maximal individual distance
