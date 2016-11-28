@@ -1,98 +1,112 @@
 
-# Template for code submission
-# name : Nabil Alhassani
-# email : nda11@pitt.edu
-# date :septemper/7th
-# class : CS0008-f2016
-# instructor : Max Novelli (man8@pitt.edu)
-# Description:Starting with Python, Chapter 2,
-# Notes:
-# any notes to the instructor and/or TA goes here
-# ...and now let's program with Python
-# This program displays my name
-# and address, with city, state, and ZIP
-# my telephone number
-# my collage
-# Assignment#2
+import os.path
 
-# create a  processfile(fh)function
+# contants
+# length of the key
+FORMAT_KEY_LENGTH = 30
 
-def processfile(fh):
-
-# open file
-    fo=open(fh,'r')
-# assign variables to distance run and number of lines(ptn)
-    pd =0
-    ptn=0
-# use for loop to read throw the file
-    for line in fo:
-#Remove the new line
-        line=line.rstrip('\n')
-#split the line
-        temp=line.split(",")
-#assing distance to value
-# increase the counting distane run and number of lines
-        pd+=1
-        ptn+=float(temp[1])
-#closing file.
-        fo.close()
-# return the distance and number of lines the function
-        return ptn,pd
-
-# create printKV function
-def printKV(key,value, klen=0):
-
-# Defining the key length and get the max space
-
-    kl=max(len(key),klen)
-
-    if(kl<klen):
-        space=kl
-        print(space)
-# check if valu is intger and float using (isinstanc)
-    if (isinstance(value,int)):
-        print(format("%20s : %10d"%(key,value)))
-    elif(isinstance(value,float)):
-        print(format("%20s : %10.3f"%(key,value)))
+#
+# printKV function
+def printKV(key,value,klen = 0):
+    # check which is the length to be used when printing the key
+    # max of klen and the length of key
+    klen = max(klen,len(key));
+    # check which is type of value and choose the proper formatting
+    if isinstance(value,str):
+        # we have a string
+        fvalue = '20s'
+    elif isinstance(value,float):
+        # we have a float
+        fvalue = '10.3f'
+    elif isinstance(value,int):
+        # we have a integer
+        fvalue = '10d'
     else:
-        print(format(key,str(kl)+'s'))
-# The infinite loop ask the user for file name
+        # we do not know what we have,
+        # so we try our best to convert it to a string and
+        # format it as a string
+        value = str(value)
+        fvalue = '20s'
+    # end if
+    #
+    # print key and value with correct formatting
+    print(format(key,'>'+str(klen)+'s'),' : ',format(value,fvalue))
+# end def
 
-while (True):
-    try:
+# processFile function
+def processFile(fh):
+    # count how many lines the files has and sum the distance that is the second field of each line
+    #
+    # initialize partial accumulators
+    # partial total distance
+    ptd = 0
+    # partial total number of lines
+    ptn = 0
 
-        fo = input(("File read:"))
-        print ('')
-        if (fo == "quite" or fo == "q"):
-            print ('')
-# display the exit statment
-        print('File to be read: Quit ')
-        exit()
+    # loops on all the lines in the files
+    # we hope that the read position is at the beginning of the file
+    for line in fh:
+        # in each iteration, we got the next line from the file
+        #
+        # remove new line (/n) and split in two parts: name and number
+        [name, distance] = line.rstrip('\n').split(',')
+        # convert distance from string to float
+        distance = float(distance)
+        # print name and distance in this record properly formatted
+        printKV('Name', name, FORMAT_KEY_LENGTH)
+        printKV('Distance', distance, FORMAT_KEY_LENGTH)
+        #
+        # update partial accumulators
+        # partial total distance
+        ptd += distance
+        # partial total number of lines
+        ptn += 1
+    # for
+    #
+    # returns partials
+    return [ptn, ptd]
+#end def
 
-#the file go back to be processe(fh) function
-        pd,ptn=processfile(fo)
-# display the Total# of lines and distance run
+# initialize totals partials
+# total distance
+td = 0
+# total number of lines
+tn = 0
+# number of files
+nf = 0
 
-        printKV("Partial Total# of lines", ptn,)
-        printKV("Partial Total distance run", pd)
-        print("")
-# close the file
+#
+#  ask the user for the first file
+print('Please enter the name of the first file to process.')
+file = input('File name : ')
 
-#Assing value to Total# of lines and "Total distance run
-        ttn=0
-        ttd=0
-#calculat and itirate the total # of lines and total distance run
-        ttn+=ptn
-        ttd+=pd
-# dispaly the total # of lines and total distance run
+# check if file name is empty, or is q or quit and also if
+while ( file != '' and file != 'quit' and file != 'q' and os.path.exists(file) ):
 
-        print('Totals')
-        printKV('Total# of lines',ttn,)
-        printKV("Total distance run", ttd)
-        print('')
-# the excpttion possible IOError and NameError
-    except IOError :
-        print ('Not found the file')
-    except NameError:
-        print ('File is not defined')
+    # open the file in read mode and creates the file object
+    fh = open(file, 'r')
+    # process the file and get the number of lines and the sum of the distances
+    ptn, ptd = processFile(fh)
+    # close the file
+    fh.close()
 
+    # update total accumulators
+    # number of files
+    nf += 1
+    # total distance
+    td += ptd
+    # total number of lines
+    tn += ptn
+
+    # ask the user the next file
+    print('Please enter the name of the next file to process. Leave empty or type q/quit to exit')
+    file = input('File name : ')
+
+#while
+
+# print report
+print('')
+printKV('Files read', nf, FORMAT_KEY_LENGTH)
+printKV('Total Distance', td, FORMAT_KEY_LENGTH)
+printKV('Names found', tn, FORMAT_KEY_LENGTH)
+print('')
