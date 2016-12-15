@@ -142,6 +142,14 @@ totalLines = sum([item[1] for item in rawData])
 # ###put participant in class
 #
 class Participant:
+    # properties
+    # name of the participant
+    name = "unknown"
+    # total distance run by the participant
+    distance = 0
+    # total number of runs by the participant
+    runs = 0
+
     # class constructor
     def __init__(self, n, d=0):
         self.name = n
@@ -170,10 +178,16 @@ class Participant:
 
     # string representation
     def __str__(self):
-        return "Name : {0:20s}. Distance run : {1:9.4f}. Runs : {2:4d}".format(self.name, self.distance, self.runs)
-
-
-
+        return \
+            "Name : " + format(self.name, '<20s') + \
+            ". Distance run : " + format(self.distance, '<9.4f') + \
+            ". Runs : " + format(self.runs, '<4d')
+        # end def __init__
+    # convert to csv
+    def tocsv(self):
+        return ','.join([self.name, str(self.runs), str(self.distance)])
+    # end def tocsv
+    # end class participant
 ##### it will be used instead of uniqueListData and participantDistances
 participants = []
 for data in rawData:
@@ -259,7 +273,12 @@ print(" Total number of participants : " + format(totalNumberOfParticipant, INTE
 print(" Number of participants")
 print("  with multiple records       : " + format(totalNumberOfParticipantWithMultipleRecords, INTEGER))
 print("")
-# loop to print all participant.
+
+
+
+# loop to print all participant
+# Name : xxxxxxxxxxxxxxxxxxx. Distance run : yyyy.yyyy. Runs : zzzz
+
 for p in participants:
     print(p)
 
