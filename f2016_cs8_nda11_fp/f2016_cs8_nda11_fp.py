@@ -263,6 +263,7 @@ print("")
 for p in participants:
     print(p)
 
+
 #
 # create output file
 outputFile = "f2016_cs8_nda11_fp.output.csv"
