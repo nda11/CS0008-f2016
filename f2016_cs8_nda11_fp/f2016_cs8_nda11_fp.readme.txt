@@ -1,0 +1,14 @@
+what I had done so far was that I took your code and I adjusted it.
+First , what I add is that participant class which are containing seven functions
+, three of which are class constructor ,
+the second increment the total distance
+ and runs counter and the third sums up all distances in the list.
+ the rest functions returns distances, name , runs, and format.
+Second, I create participants lis and
+I looped through it to get name and distance.
+ Then I summed all participants distance.
+ next I adjust on the loop that get the min and max distances
+  moreover,I adjust the total Number Of Participant
+  With Multiple Records.
+Finally I create a for loop to get the result .
+The rest I don't change it.
