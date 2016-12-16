@@ -1,4 +1,4 @@
-what I had done so far was that I took your code and I adjusted it.
+What I have done so far was that I took your code and I adjusted it.
 First , what I add is that participant class which are containing seven functions
 , three of which are class constructor ,
 the second increment the total distance
