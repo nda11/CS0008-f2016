@@ -183,10 +183,7 @@ class Participant:
             ". Distance run : " + format(self.distance, '<9.4f') + \
             ". Runs : " + format(self.runs, '<4d')
         # end def __init__
-    # convert to csv
-    def tocsv(self):
-        return ','.join([self.name, str(self.runs), str(self.distance)])
-    # end def tocsv
+
     # end class participant
 ##### it will be used instead of uniqueListData and participantDistances
 participants = []
